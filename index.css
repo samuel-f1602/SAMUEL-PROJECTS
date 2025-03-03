@@ -202,6 +202,11 @@ body {
     width: 260px;
 }
 
+.size2 {
+    margin-top: 5px;
+    height: 225px;
+}
+
 .lang-projects img {
     height: 20px;
 }
@@ -224,6 +229,15 @@ body {
 .btn a {
     text-decoration: none;
     color: #000;
+}
+
+.capture-ecran7 {
+    text-align: center;
+}
+
+.worlds {
+    width: 800px;
+    height: 400px;
 }
 
 /*contact*/
