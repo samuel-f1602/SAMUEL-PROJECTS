@@ -1,4 +1,4 @@
-import { countries, reset, search } from "../countriesService.js";
+import { countries, reset, search } from "./countriesService.js";
 const cardsContainer = document.getElementById('cards');
 
 document.getElementById('search-input').addEventListener('input', (event) => {
@@ -25,31 +25,36 @@ const generateCard = (country) => {
     cardImg.src = country.flags.png;
     cardImg.className = "card-img-top img mt-2 border rounded shadow";
 
+    // create a card body, style it
     const cardBody = document.createElement('div');
     cardBody.className = "card-body";
 
+    // create a card title, style it and set the text
     const cardTitle = document.createElement('h5');
     cardTitle.className = "card-title";
     cardTitle.innerText = country.name.common;
 
+    // create a paragraph for population, style it and set the text
     const population = document.createElement('p');
     population.className = "card-text";
     population.innerText = `Population: ${country.population}`;
 
+    // create a paragraph for region, style it and set the text
     const region = document.createElement('p');
     region.className = "card-text";
     region.innerText = `Region: ${country.region}`;
 
+    // create a card footer, style it
     const cardFooter = document.createElement('div');
     cardFooter.className = "card-footer d-flex justify-content-center mb-2";
 
+    // create a heart icon, style it
     let heartIcon = document.createElement('i');
     heartIcon.className = "fa fa-heart text-dark";
 
     heartIcon.addEventListener('click', () => {
         heartIcon.classList.toggle('text-danger');
         heartIcon.classList.toggle('text-dark');
-
     });
 
     cardFooter.appendChild(heartIcon);
@@ -65,6 +70,7 @@ const generateCard = (country) => {
     const cardsContainer = document.getElementById('cards');
     cardsContainer.appendChild(card);
 }
+
 
 const createCards = () => {
     for (const country of countries) {
