@@ -9,7 +9,7 @@
         .bgtime {
             height: 100%;
             width: 100%;
-            background-image: url(/image-projects/glob.jpg);
+            background-image: url(../image-projects/glob.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -132,7 +132,7 @@
             text-align: center;
             margin-top: 50px;
             font-size: 15px;
-            background-image: url(/image-projects/round\ israel.png);
+            background-image: url(../image-projects/round\ israel.png);
             background-repeat: no-repeat;
             background-position: center bottom;
             background-size: cover;
@@ -154,7 +154,7 @@
             height: 30%;
             text-align: center;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ france.png);
+            background-image: url(../image-projects/round\ france.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -176,7 +176,7 @@
             text-align: center;
             font-size: 15px;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ france.png);
+            background-image: url(../image-projects/round\ france.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -209,7 +209,7 @@
             text-align: center;
             font-size: 15px;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ englend.png);
+            background-image: url(../image-projects/round\ englend.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -233,7 +233,7 @@
             text-align: center;
             font-size: 15px;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ germany.png);
+            background-image: url(../image-projects/round\ germany.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -254,7 +254,7 @@
             height: 30%;
             text-align: center;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ italy.png);
+            background-image: url(../image-projects/round\ italy.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -287,7 +287,7 @@
             height: 30%;
             text-align: center;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ china.png);
+            background-image: url(../image-projects/round\ china.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -309,7 +309,7 @@
             height: 30%;
             text-align: center;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ mexico.png);
+            background-image: url(../image-projects/round\ mexico.png);
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
@@ -335,7 +335,7 @@
             height: 30%;
             text-align: center;
             margin-top: 50px;
-            background-image: url(/image-projects/round\ brazil.png);
+            background-image: url(../image-projects/round\ brazil.png);
             background-repeat: no-repeat;
             background-position: center bottom;
             background-size: cover;

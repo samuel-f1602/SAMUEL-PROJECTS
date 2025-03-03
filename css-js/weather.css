@@ -27,7 +27,7 @@
 }
 
 body {
-    background: linear-gradient(120deg, #89f7ef 0%, #66a6ff 100%), url("/image-projects/weather.jpg") no-repeat;
+    background: linear-gradient(120deg, #89f7ef 0%, #66a6ff 100%), url("../image-projects/weather.jpg") no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
     display: flex;
