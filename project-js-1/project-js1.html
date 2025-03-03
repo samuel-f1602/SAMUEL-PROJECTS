@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK JACK 21</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .game-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #006400;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .cards {
+            margin: 10px 0;
+        }
+
+        .buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        .buttons button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Black Jack 21</h1>
+        <div class="cards">
+            <p id="player-cards">Your cards: </p>
+            <p id="dealer-cards">Dealer's cards: </p>
+        </div>
+        <div class="buttons">
+            <button onclick="drawCard()">Draw a Card</button>
+            <button onclick="stand()">Stand</button>
+            <button onclick="resetGame()">Restart</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let playerCards = [];
+        let dealerCards = [];
+        let deck = [];
+        let gameOver = false;
+
+        function createDeck() {
+            const suits = ['♥', '♦', '♣', '♠'];
+            const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+            deck = [];
+
+            for (let suit of suits) {
+                for (let value of values) {
+                    deck.push({ suit, value });
+                }
+            }
+
+            deck = deck.sort(() => Math.random() - 0.5);
+        }
+
+        function drawCard() {
+            if (gameOver) return;
+            if (deck.length === 0) createDeck();
+            playerCards.push(deck.pop());
+            updateCards();
+            checkScores();
+        }
+
+        function stand() {
+            if (gameOver) return;
+            while (calculateScore(dealerCards) < 17) {
+                dealerCards.push(deck.pop());
+            }
+            updateCards();
+            checkScores(true);
+        }
+
+        function resetGame() {
+            playerCards = [];
+            dealerCards = [];
+            createDeck();
+            updateCards();
+            document.getElementById('result').textContent = '';
+            gameOver = false;
+        }
+
+        function updateCards() {
+            document.getElementById('player-cards').textContent = 'Your cards: ' + playerCards.map(card => card.value + card.suit).join(', ');
+            document.getElementById('dealer-cards').textContent = 'Dealer\'s cards: ' + dealerCards.map(card => card.value + card.suit).join(', ');
+        }
+
+        function calculateScore(cards) {
+            let score = 0;
+            let aces = 0;
+
+            for (let card of cards) {
+                if (card.value === 'A') {
+                    aces++;
+                    score += 11;
+                } else if (['K', 'Q', 'J'].includes(card.value)) {
+                    score += 10;
+                } else {
+                    score += parseInt(card.value);
+                }
+            }
+
+            while (score > 21 && aces > 0) {
+                score -= 10;
+                aces--;
+            }
+
+            return score;
+        }
+
+        function checkScores(stand = false) {
+            const playerScore = calculateScore(playerCards);
+            const dealerScore = calculateScore(dealerCards);
+            let result = '';
+
+            if (stand) {
+                if (playerScore > 21) {
+                    result = 'You have exceeded 21, you lost!';
+                } else if (dealerScore > 21) {
+                    result = 'The dealer has exceeded 21, you won!';
+                } else if (playerScore > dealerScore) {
+                    result = 'You won!';
+                } else if (playerScore < dealerScore) {
+                    result = 'You lost!';
+                } else {
+                    result = 'It\'s a tie!';
+                }
+                gameOver = true;
+            } else if (playerScore > 21) {
+                result = 'You have exceeded 21, you lost!';
+                gameOver = true;
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+
+        createDeck();
+    </script>
+</body>
+
+</html>

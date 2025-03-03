@@ -173,6 +173,59 @@ body {
     color: #000;
 }
 
+/*js cards projects*/
+.main-projects {
+    text-align: center;
+}
+
+.card-js {
+    box-shadow: 10px 10px 10px 10px rgba(103, 103, 103, 0.788);
+    border: 1px solid rgb(0, 234, 255) !important;
+    text-align: center;
+    height: 400px !important;
+    margin-top: 50px !important;
+}
+
+.row {
+    max-width: 80vw !important;
+    margin-top: 50px !important;
+    margin: auto !important;
+}
+
+.image-project {
+    text-align: center;
+}
+
+.size {
+    margin-top: 5px;
+    height: 225px;
+    width: 260px;
+}
+
+.lang-projects img {
+    height: 20px;
+}
+
+.btn-projects-js {
+    background-color: rgb(0, 234, 255) !important;
+    border: 2px solid #fff !important;
+    border-radius: 200px !important;
+    font-size: 15px !important;
+    color: #000 !important;
+    transition-duration: 0.2s !important;
+}
+
+.btn-projects-js:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid rgb(0, 234, 255) !important;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #000;
+}
+
 /*contact*/
 .contact {
     background-color: #000000aa;
@@ -187,6 +240,8 @@ body {
     transition-duration: 0.2s !important;
     background-color: rgb(0, 234, 255) !important;
 }
+
+
 
 /*social icons*/
 .social {
