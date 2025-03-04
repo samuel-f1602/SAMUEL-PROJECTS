@@ -1,4 +1,4 @@
-import TaskManager from "../JS/classes/TaskManager";
+import TaskManager from "./classes/TaskManager.js";
 
 const manager = new TaskManager();
 
@@ -79,6 +79,5 @@ function showTasks() {
         }
     }
 }
-
 
 showTasks();
