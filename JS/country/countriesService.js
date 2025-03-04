@@ -4,6 +4,7 @@ const getCountries = async () => {
         return await res.json();
     } catch (error) {
         console.error('Failed to fetch countries', error);
+        return [];
     }
 };
 
@@ -15,11 +16,10 @@ const reset = () => {
 }
 
 const search = (word) => {
-    countries = countriesFull.filter((country) => {
-        const name = country.name.common.toLowerCase();
-        const formatedWord = word.toLowerCase();
-        return name.includes(formatedWord);
-    })
+    const formattedWord = word.toLowerCase();
+    countries = countriesFull.filter((country) =>
+        country.name.common.toLowerCase().includes(formattedWord)
+    );
 }
 
 export { countries, reset, search };

@@ -7,4 +7,3 @@ class Task {
 }
 
 export default Task;
-// export {Task, num}
