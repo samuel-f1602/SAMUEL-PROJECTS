@@ -1,4 +1,4 @@
-import TaskManager from "./classes/TaskManager";
+import TaskManager from "../JS/classes/TaskManager";
 
 let manager = new TaskManager();
 console.log(manager);
