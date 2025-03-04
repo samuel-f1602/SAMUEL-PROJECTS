@@ -1,4 +1,4 @@
-import TaskManager from "../classes/TaskManager.js";
+import TaskManager from "../JS/classes/TaskManager";
 
 const manager = new TaskManager();
 
@@ -7,7 +7,7 @@ window.addNewTask = function () {
     if (description) {
         manager.addTask(description);
         showTasks();
-        document.getElementById("description").value = ""; // נקה אחרי הוספה
+        document.getElementById("description").value = "";
     } else {
         alert("Please enter a valid description.");
     }
