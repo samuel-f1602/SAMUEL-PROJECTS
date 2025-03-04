@@ -1,4 +1,4 @@
-import Task from "..classes/Task";
+import Task from "../classes/Task";
 class TaskManager {
     constructor() {
         this.tasks = [];
