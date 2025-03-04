@@ -1,4 +1,4 @@
-import TaskManager from "./classes/TaskManager.js";
+import TaskManager from "../classes/TaskManager.js";
 
 const manager = new TaskManager();
 
@@ -80,5 +80,5 @@ function showTasks() {
     }
 }
 
-// הצגת המשימות בהתחלה (אם תרצה לטעון ממשימות שמורות ב-localStorage בהמשך)
+
 showTasks();
